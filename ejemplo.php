@@ -8,7 +8,6 @@
 	** asignando valores a los ratios
 	** $buscador = new Buscador($palabras_clave, 0.5, 3);
 	*/
-	$palabra = "gps";
-	print_r ($buscador->obtener_palabra_clave($palabra));
-
+	print_r ($buscador->obtener_palabra_clave("gps"));
+	print_r ($buscador->obtener_palabra_clave("tavle"));
 ?>
