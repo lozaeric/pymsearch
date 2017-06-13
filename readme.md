@@ -8,7 +8,9 @@ Un ejemplo sería buscar "gps" y que exista la palabra clave "camara anti **g**o
 No puedo asociar la palabra "wire" con "walk" si únicamente tienen un caracter en común. 
 
 Para resolver estos dos problemas existen dos ratios: el primero relaciona el puntaje con la longitud de la palabra (por defecto es 0.75) y el segundo se refiere a la longitud de la clave y la palabra (por defecto es 2). En resumen,
-para que una clave sea una respuesta valida, debe tener al menos 75% de los caracteres en común con la palabra buscada y su longitud debe ser de no mas del doble de caracteres que la buscada.
+para que una clave sea una respuesta valida, debe cumplir estas ecuaciones:
+* longitud_palabra * 0.75 < puntaje_clave
+* longitud_palabra * 2 > longitud_clave  
 
 ### Instalación: 
 ```php5
@@ -20,7 +22,7 @@ Usando los valores por defecto:
 	$palabras_clave = ["tablet", "drone", "smartwatch", "camara anti golpes", "gps"];
 	$buscador = new Buscador($palabras_clave);
 ```
-Asignando valores a los ratios. En este caso, una clave es válida si tiene al menos el 50% de los caracteres en común con la palabra buscada y su longitud debe ser de no mas del triple que la buscada. 
+Asignando valores a los ratios:
 ```php5
 	$palabras_clave = ["tablet", "drone", "smartwatch", "camara anti golpes", "gps"];
 	$buscador = new Buscador($palabras_clave, 0.5, 3);
