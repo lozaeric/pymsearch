@@ -8,7 +8,7 @@ Un ejemplo sería buscar "gps" y que exista la palabra clave "camara anti **g**o
 No puedo asociar la palabra "wire" con "walk" si únicamente tienen un caracter en común. 
 
 Para resolver estos dos problemas existen dos ratios: el primero relaciona el puntaje con la longitud de la palabra (por defecto es 0.75) y el segundo se refiere a la longitud de la clave y la palabra (por defecto es 2). En resumen,
-para que una clave sea una respuesta valida, debe cumplir estas ecuaciones:
+para que una clave sea una respuesta valida, debe cumplir estas condiciones:
 * longitud_palabra * 0.75 < puntaje_clave
 * longitud_palabra * 2 > longitud_clave  
 
